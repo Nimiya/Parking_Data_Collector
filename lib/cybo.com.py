@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 c="https://area-codes.cybo.com/india/484_ernakulam/parking-lots-and-garages/?"
 # query the website and return the html to the variable ‘page’
 page=urllib2.urlopen(c)
-# parse the html using beautiful soap and store in variable `soup`
+# parse the html using beautiful soup and store in variable `soup`
 soup=BeautifulSoup(page,'html.parser')
 name=[]
 for n in soup.find_all(attrs={"class":"e-bname ellipsis"}):
